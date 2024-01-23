@@ -50,7 +50,6 @@ Console.WriteLine("Задача 1");
 // deleteSecondDigit(number);
 
 Console.WriteLine("Задача 2");
-
 // Напишите программу, которая принимает на вход трёхзначное
 // число и возводит вторую цифру этого числа в степень, равную
 // третьей цифре.
@@ -107,7 +106,6 @@ Console.WriteLine("Задача 2");
 // Console.WriteLine(secondToThird(number));
 
 Console.WriteLine("Задача 3");
-
 // Напишите программу, которая будет принимать на вход два
 // числа и выводить, является ли второе число кратным первому.
 // Если второе число некратно первому, то программа выводит
@@ -117,22 +115,30 @@ Console.WriteLine("Задача 3");
 // 16, 8 => да
 // 4, 3 => нет, 1
 
-void Task3(int num_1, int num_2)
+// void Task3(int num_1, int num_2)
+// {
+//     if (num_1 % num_2 == 0)
+//     {
+//         Console.WriteLine("да");
+//     }
+//     else
+//     {
+//         Console.WriteLine("нет, " + num_1 % num_2);
+//     }
+// }
+
+// Console.WriteLine("Input first number: ");
+// int number_1 = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine("Input second number: ");
+// int number_2 = Convert.ToInt32(Console.ReadLine());
+
+// Task3(number_1, number_2);
+
+Console.WriteLine("Пример метода Random");
+void Task4()
 {
-    if (num_1 % num_2 == 0)
-    {
-        Console.WriteLine("да");
-    }
-    else
-    {
-        Console.WriteLine("нет, " + num_1 % num_2);
-    }
+    int num = new Random().Next(10, 99 + 1);
+    Console.WriteLine(num);
 }
-
-Console.WriteLine("Input first number: ");
-int number_1 = Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine("Input second number: ");
-int number_2 = Convert.ToInt32(Console.ReadLine());
-
-Task3(number_1, number_2);
+Task4();
