@@ -59,13 +59,40 @@ Console.WriteLine("Задача 2");
 // 254 => 5^4 = 625
 // 617 => 1
 
+// Решение задачи №2 через встроенную функцию:
+// int secondToThird(int num)
+// {
+//     if(num >= 100 && num <= 999)
+//     {
+//         int ed = num % 10;
+//         int dec = (num / 10) % 10;
+//         return (int)Math.Pow(dec, ed);
+//     }
+//     else
+//     {
+//         Console.WriteLine("Введено не трёхзначное число");
+//     }
+//     return 0;
+// }
+
+// Console.WriteLine("Input number: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine(secondToThird(number));
+
+// Решение задачи №2 через цикл:
 int secondToThird(int num)
 {
     if(num >= 100 && num <= 999)
     {
         int ed = num % 10;
         int dec = (num / 10) % 10;
-        return (int)Math.Pow(dec, ed);
+        int result = dec;
+        for (int i = 0; i < ed-1; i++)
+        {
+            result = result * dec;
+        }
+        return result;
     }
     else
     {
