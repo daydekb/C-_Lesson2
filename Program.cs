@@ -59,19 +59,22 @@ Console.WriteLine("Задача 2");
 // 254 => 5^4 = 625
 // 617 => 1
 
-void deleteSecondDigit(int num)
+int secondToThird(int num)
 {
     if(num >= 100 && num <= 999)
     {
-        Console.WriteLine($"{num} -> {num/100 * 10 + num % 10}");
+        int ed = num % 10;
+        int dec = (num / 10) % 10;
+        return (int)Math.Pow(dec, ed);
     }
     else
     {
         Console.WriteLine("Введено не трёхзначное число");
     }
+    return 0;
 }
 
 Console.WriteLine("Input number: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-deleteSecondDigit(number);
+Console.WriteLine(secondToThird(number));
